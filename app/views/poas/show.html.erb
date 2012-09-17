@@ -76,5 +76,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_poa_path(@poa) %> |
+<%= link_to 'Edit', edit_poa_path(@poa) %> |<%= link_to "PDF", poa_path(@poa, :format => :pdf) %>|
 <%= link_to 'Back', poas_path %>
