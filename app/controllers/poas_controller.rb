@@ -1,6 +1,4 @@
 class PoasController < ApplicationController
-  # GET /poas
-  # GET /poas.json
   def index
     @poas = Poa.all
 
@@ -10,19 +8,12 @@ class PoasController < ApplicationController
     end
   end
 
-  # GET /poas/1
-  # GET /poas/1.json
+
   def show
     @poa = Poa.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @poa }
-    end
   end
 
-  # GET /poas/new
-  # GET /poas/new.json
+
   def new
     @poa = Poa.new
 
@@ -32,13 +23,12 @@ class PoasController < ApplicationController
     end
   end
 
-  # GET /poas/1/edit
+
   def edit
     @poa = Poa.find(params[:id])
   end
 
-  # POST /poas
-  # POST /poas.json
+
   def create
     @poa = Poa.new(params[:poa])
 
@@ -53,8 +43,7 @@ class PoasController < ApplicationController
     end
   end
 
-  # PUT /poas/1
-  # PUT /poas/1.json
+
   def update
     @poa = Poa.find(params[:id])
 

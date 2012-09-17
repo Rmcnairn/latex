@@ -1,7 +1,7 @@
 SlidesApp::Application.routes.draw do
   resources :poas
+    root :to => "poas#index"
 
-  resources :presentations
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
