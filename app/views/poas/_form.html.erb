@@ -1,0 +1,83 @@
+<%= form_for(@poa) do |f| %>
+  <% if @poa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@poa.errors.count, "error") %> prohibited this poa from being saved:</h2>
+
+      <ul>
+      <% @poa.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <fieldset>
+  <div class="field">
+    <%= f.label :gname, "Granter's name" %><br />
+    <%= f.text_field :gname %>
+  </div>
+  <div class="field">
+    <%= f.label :gaddress1, 'Address line 1' %><br />
+    <%= f.text_field :gaddress1 %>
+  </div>
+  <div class="field">
+    <%= f.label :gaddress2, 'Address line 2' %><br />
+    <%= f.text_field :gaddress2 %>
+  </div>
+  <div class="field">
+    <%= f.label :gpostcode, 'postcode' %><br />
+    <%= f.text_field :gpostcode %>
+  </div>
+</fieldset>
+</br>
+<fieldset>
+  <div class="field">
+    <%= f.label :a1name, "First Attorney's name" %><br />
+    <%= f.text_field :a1name %>
+  </div>
+  <div class="field">
+    <%= f.label :a1address1, 'Address Line 1' %><br />
+    <%= f.text_field :a1address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :a1address2, 'Address line 2' %><br />
+    <%= f.text_field :a1address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :a1postcode, 'Postcode' %><br />
+    <%= f.text_field :a1postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :a1dob, 'D.O.B' %><br />
+    <%= f.date_select :a1dob %>
+  </div>
+</fieldset>
+<fieldset>
+  <div class="field">
+    <%= f.label :a2name, "Second Attorney's name" %><br />
+    <%= f.text_field :a2name %>
+  </div>
+  <div class="field">
+    <%= f.label :a2address1, 'Address Line 1' %><br />
+    <%= f.text_field :a2address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :a2address2, 'Address Line 2' %><br />
+    <%= f.text_field :a2address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :a2postcode, 'Postcode' %><br />
+    <%= f.text_field :a2postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :a2dob, 'D.O.B' %><br />
+    <%= f.date_select :a2dob %>
+  </div>
+</fieldset>
+  <div class="field">
+    <%= f.label :advanced_directive,'Advanced Directive?' %><br />
+    <%= f.check_box :advanced_directive %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<% title "Presentations" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  <% for presentation in @presentations %>
+    <tr>
+      <td><%= presentation.title %></td>
+      <td><%= link_to "Show", presentation %></td>
+      <td><%= link_to "Get", presentation_path(presentation, :format => :pdf) %></td>
+      <td><%= link_to "Edit", edit_presentation_path(presentation) %></td>
+      <td><%= link_to "Destroy", presentation, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Presentation", new_presentation_path %></p>
