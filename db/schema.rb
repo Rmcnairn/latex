@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120112012324) do
+ActiveRecord::Schema.define(:version => 20120917193506) do
+
+  create_table "poas", :force => true do |t|
+    t.string   "gname"
+    t.string   "gaddress1"
+    t.string   "gaddress2"
+    t.string   "gpostcode"
+    t.string   "a1name"
+    t.string   "a1address1"
+    t.string   "a1address2"
+    t.string   "a1postcode"
+    t.date     "a1dob"
+    t.string   "a2name"
+    t.string   "a2address1"
+    t.string   "a2address2"
+    t.string   "a2postcode"
+    t.date     "a2dob"
+    t.boolean  "advanced_directive"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "presentations", :force => true do |t|
     t.string   "title"

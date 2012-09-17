@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  gname: MyString
+  gaddress1: MyString
+  gaddress2: MyString
+  gpostcode: MyString
+  a1name: MyString
+  a1address1: MyString
+  a1address2: MyString
+  a1postcode: MyString
+  a1dob: 2012-09-17
+  a2name: MyString
+  a2address1: MyString
+  a2address2: MyString
+  a2postcode: MyString
+  a2dob: 2012-09-17
+  advanced_directive: false
+
+two:
+  gname: MyString
+  gaddress1: MyString
+  gaddress2: MyString
+  gpostcode: MyString
+  a1name: MyString
+  a1address1: MyString
+  a1address2: MyString
+  a1postcode: MyString
+  a1dob: 2012-09-17
+  a2name: MyString
+  a2address1: MyString
+  a2address2: MyString
+  a2postcode: MyString
+  a2dob: 2012-09-17
+  advanced_directive: false
