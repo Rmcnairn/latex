@@ -6,62 +6,90 @@
 \begin{document}
 \begin{center}
 {\bf CONTINUING AND WELFARE POWER OF ATTORNEY}
+
  
 by
+
  
-{\bf <%= @poa.gname %> }
+{\bf <%= @poa.gname.chomp.upcase %> }
+
  
 in favour of
+
  
-{\bf <%= @poa.a1name %>}
+{\bf <%= @poa.a1name.chomp.upcase %>}
+
  
 and
+
  
-{\bf <%= @poa.a2name %> }
+{\bf <%= @poa.a2name.chomp.upcase %> }
 \\
 \\
 \begin{center}
-\line(1,0){100}
+\line(1,0){250}
 \end{center}
 \\
 \\
 \\
 \\
-\hfill <%= Time.now.year %> \\
-\reference \\
-\\
-\\
-\\
- 
+\hfill <%= Time.now.year %>
+
+
+\hfill <%= @poa.reference.chomp if @poa.reference %>
+\reference \\*
+\\*
+\\*
+\\*
+
+
+
+
+
+
+
+
+
+
 GILLESPIE MACANDREW LLP
-5 Atholl Crescent, Edinburgh EH3 8EJ
+
+5 Atholl Crescent
+
+Edinburgh 
+
+EH3 8EJ
+
 DX ED113 (EDINBURGH-1)
+
 Telephone: (0131) 225 1677
+
 Fax: (0131) 225 4519
+
 FAS 2432
 \end{center}
+\clearpage
  
-{\bf CONTINUING and WELFARE POWER OF ATTORNEY}
+{\bf CONTINUING and WELFARE POWER OF ATTORNEY} \\*
  
-By \\
+By \\*
  
-{\br <%= @poa.gname %>, <%= @poa.gaddress1 %>, <%= @poa.gaddress2 if @poa.gaddress2 %>, <%= @poa.gpostcode %> }.
+{\bf <%= @poa.gname.chomp.upcase %>, <%= @poa.gaddress1 %>, <%= @poa.gaddress2 if @poa.gaddress2 %>, <%= @poa.gpostcode.chomp.upcase %>}.
  
                    \section{Appointment}
 
                    \subsection{}I appoint
 
-                   {\bf \subsubsection{}<%= @poa.a1name %>, <%= @poa.a1address1 %>, <%= @poa.a1address2 if @poa.a1address2  %>, <%= @poa.a1postcode %> } and \\
+                   {\bf \subsubsection{}<%= @poa.a1name.upcase %> ('<%= @poa.a1name.chomp.split.first %>'), <%= @poa.a1address1 %>, <%= @poa.a1address2 if @poa.a1address2  %>, <%= @poa.a1postcode.chomp.upcase %> } and \\
 
-                   {\bf \subsubsection{}<%= @poa.a2name %>,<%= @poa.a2address1 %>, <%= @poa.a2address2 if @poa.a2address2 %> <%= @poa.a2postcode %> }\\
+                   {\bf \subsubsection{}<%= @poa.a2name.chomp.upcase %> ('<%= @poa.a2name.chomp.split.first %>'),<%= @poa.a2address1 %>, <%= @poa.a2address2 if @poa.a2address2 %> <%= @poa.a2postcode.chomp.upcase %>}\\
 
 and each of them alone and the survivors and survivor to be my continuing attorneys and continuing attorney in terms of section 15 of the Adults with Incapacity (Scotland) Act 2000 (which act and any subsequent amendment of that is referred to as the "Act").
 
                    \subsection{}I appoint
 
-                   \subsubsection{}the said <%= @poa.a1name %>, and
+                   \subsubsection{}the said <%= @poa.a1name.chomp.split.first %>, and
 
-                   \subsubsection{}the said <%= @poa.a2name %>, \\
+                   \subsubsection{}the said <%= @poa.a2name.chomp.split.first %>, \\
 
 and each of them alone and the survivors and survivor to be my welfare attorneys and welfare attorney in terms of section 16 of the Act.
 
@@ -218,7 +246,37 @@ This continuing and welfare power of attorney shall subsist until it is recalled
 I am habitually resident in Scotland. The law of Scotland shall apply to the existence, extent, modification, and extinction of this continuing and welfare power of attorney.
 
                    \section{Details of execution}
+				
 
 This document is executed as follows:-
+
+
+
+
+
+.............................................................. \hfill ..............................................................
+
+
+
+signature of witness \hfill signature of <%= @poa.gname.chomp.upcase%>
+
+
+.............................................................. 
+
+ 
+full name of witness (print)
+
+
+.............................................................. \hfill ..............................................................
+
+
+.............................................................. \hfill date of signing 
+
+
+.............................................................. \hfill ..............................................................
+
+
+address of witness \hfill place of signing
+
 
 \end{document}

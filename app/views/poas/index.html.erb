@@ -1,12 +1,19 @@
-<h1>Listing poas</h1>
+<% if Poa.all.size > 0 %>
+<% if Poa.all.size == 1 %>
+<h3>Previously Created Power of Attorney</h3>
+<% else %>
+<h3>Previously Created Powers of Attorney</h3>
+<% end %>
 
 <table>
   <tr>
     <th>Granter</th>
     <th>Attorney 1</th>
     <th>Attorney 2</th>
+    <th>reference</th>
     <th></th>
-    <th></th>
+	<th></th>
+	<th></th>
     <th></th>
   </tr>
 
@@ -15,6 +22,7 @@
     <td><%= poa.gname %></td>
     <td><%= poa.a1name %></td>
     <td><%= poa.a2name %></td>
+	<td><%= poa.reference %></td>
     <td><%= link_to 'Show', poa %></td>
     <td><%= link_to 'Edit', edit_poa_path(poa) %></td>
 	<td><%= link_to "PDF", poa_path(poa, :format => :pdf) %></td>
@@ -22,7 +30,7 @@
   </tr>
 <% end %>
 </table>
-
+<% end %>
 <br />
 
-<%= link_to 'New Poa', new_poa_path %>
+<%= button_to 'New Poa', new_poa_path, :method => 'get' %>

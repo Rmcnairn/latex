@@ -28,10 +28,10 @@
     adapter: postgresql
     encoding: unicode
     host: localhost
-    database: rails-latex-example_development
+    database: document_development
 
   test:
     adapter: postgresql
     encoding: unicode
     host: localhost
-    database: rails-latex-example_test
+    database: document_test

@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :reference, "Reference" %><br />
+    <%= f.text_field :reference %>
+  </div>
   <fieldset>
   <div class="field">
     <%= f.label :gname, "Granter's name" %><br />
@@ -32,7 +36,7 @@
 <fieldset>
   <div class="field">
     <%= f.label :a1name, "First Attorney's name" %><br />
-    <%= f.text_field :a1name %>
+    <%= f.text_field :a1name, :placeholder => 'John Smith' %>
   </div>
   <div class="field">
     <%= f.label :a1address1, 'Address Line 1' %><br />

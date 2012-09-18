@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120917193506) do
+ActiveRecord::Schema.define(:version => 20120918055955) do
 
   create_table "poas", :force => true do |t|
     t.string   "gname"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20120917193506) do
     t.boolean  "advanced_directive"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "reference"
   end
 
   create_table "presentations", :force => true do |t|
