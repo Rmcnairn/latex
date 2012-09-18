@@ -17,7 +17,7 @@
   <fieldset>
   <div class="field">
     <%= f.label :gname, "Granter's name" %><br />
-    <%= f.text_field :gname %>
+    <%= f.text_field :gname, :placeholder => 'John Smith' %>
   </div>
   <div class="field">
     <%= f.label :gaddress1, 'Address line 1' %><br />
@@ -36,7 +36,7 @@
 <fieldset>
   <div class="field">
     <%= f.label :a1name, "First Attorney's name" %><br />
-    <%= f.text_field :a1name, :placeholder => 'John Smith' %>
+    <%= f.text_field :a1name %>
   </div>
   <div class="field">
     <%= f.label :a1address1, 'Address Line 1' %><br />
