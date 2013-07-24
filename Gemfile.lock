@@ -64,6 +64,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.0.4)
     nifty-generators (0.4.6)
+    pandoc-ruby (0.7.4)
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.3.6)
@@ -126,6 +127,7 @@ DEPENDENCIES
   mocha
   nested_form!
   nifty-generators
+  pandoc-ruby
   pg
   rails (= 3.1.3)
   rails-latex
